@@ -1,7 +1,6 @@
 {
     "name": "tereresoft/magicadmin",
     "description": "Crea un Admin",
-    "type": "library",
     "authors": [
         {
             "name": "Richard Arce",
@@ -9,7 +8,7 @@
         }
     ],
     
-    "minimum-stability":"deve",
+    "minimum-stability":"dev",
   	"scripts":{
 			"post-root-package-install": [
 				"php -r \"copy('MagicAdminCommand.php', 'app/Console/Commands/MagicAdminCommand.php');\""
