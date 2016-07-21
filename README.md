@@ -1,2 +1,2 @@
-# magicadmin
+# MagicAdmin
 Crea un Admin Backend
