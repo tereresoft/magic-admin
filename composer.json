@@ -9,15 +9,12 @@
         }
     ],
     "version":"0.0.1-stable",
-    
+    "minimum-stability":"0.0.1-stable",
   	"scripts":{
 			"post-root-package-install": [
 				"php -r \"copy('MagicAdminCommand.php', 'app/Console/Commands/MagicAdminCommand.php');\""
 			]
-	},
-     "config":{
-     	        "preferred-install": "dist"
-
-     }
+	}
+     
 
 }
