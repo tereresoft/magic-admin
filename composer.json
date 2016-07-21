@@ -8,6 +8,7 @@
             "email": "tereresoft@gmail.com"
         }
     ],
+    "version":"0.0.1",
     "minimum-stability": "stable",
   	"scripts":{
 			"post-root-package-install": [
