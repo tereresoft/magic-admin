@@ -15,4 +15,9 @@
 				"php -r \"copy('MagicAdminCommand.php', 'app/Console/Commands/MagicAdminCommand.php');\""
 			]
 	},
+     "config":{
+     	        "preferred-install": "dist"
+
+     }
+
 }
