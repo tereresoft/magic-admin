@@ -1,26 +1,17 @@
 {
-    "name": "rifarca/magicadmin",
-    "description": "Crea un Admin Backend para ABM con dentro de Laravel con Theme de Bootstrap",
+    "name": "tereresoft/magicadmin",
+    "description": "Crea un Admin",
+    "type": "library",
     "authors": [
         {
-            "name": "rifarca",
-            "email": "rifarca@gmail.com"
-        }
-    ],
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "http://localhost/magicadmin"
+            "name": "Richard Arce",
+            "email": "tereresoft@gmail.com"
         }
     ],
     "minimum-stability": "stable",
-    "scripts":{
+  	"scripts":{
 			"post-root-package-install": [
 				"php -r \"copy('MagicAdminCommand.php', 'app/Console/Commands/MagicAdminCommand.php');\""
 			]
 	},
-    "config": {
-        "disable-tls": true,
-        "secure-http": false
-    }
 }
