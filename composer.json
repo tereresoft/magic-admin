@@ -8,8 +8,8 @@
             "email": "tereresoft@gmail.com"
         }
     ],
-    "version":"0.0.1-stable",
-    "minimum-stability":"0.0.1-stable",
+    
+    "minimum-stability":"deve",
   	"scripts":{
 			"post-root-package-install": [
 				"php -r \"copy('MagicAdminCommand.php', 'app/Console/Commands/MagicAdminCommand.php');\""
