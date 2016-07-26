@@ -8,5 +8,6 @@
             "email": "tereresoft@gmail.com"
         }
     ],
+    "minimum-stability":"stable",
     "require": {}
 }
