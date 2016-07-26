@@ -1,14 +1,12 @@
 {
     "name": "tereresoft/magicadmin",
-    "description": "Crea un Admin",
+    "description": "Crea un Admin Backend",
+    "license": "MIT",
     "authors": [
         {
             "name": "Richard Arce",
             "email": "tereresoft@gmail.com"
         }
-    ]
-    
-    
-     
-
+    ],
+    "require": {}
 }
