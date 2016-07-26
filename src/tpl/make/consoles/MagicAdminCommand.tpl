@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Auth\Console;
+namespace {{namespace}}Console\Command;
 
 use Illuminate\Console\Command;
 use Illuminate\Console\AppNamespaceDetectorTrait;
