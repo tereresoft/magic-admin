@@ -9,7 +9,7 @@
         }
     ],
     "version":"0.0.3-stable",
-    "minimum-stabuluty":"stable",
+    "minimum-stability":"stable",
     "autoload": {
         "psr-4": {
             "tereresoft\\magicadmin\\": "src/"
