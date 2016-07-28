@@ -8,16 +8,12 @@
             "email": "tereresoft@gmail.com"
         }
     ],
-    "version":"0.0.3-stable",
-    "minimum-stability":"stable",
+    
+    "minimum-stability":"dev",
     "autoload": {
         "psr-4": {
             "tereresoft\\magicadmin\\": "src/"
         }
-    },
-    "extra": {
-        "branch-alias": {
-            "stable": "0.0.3-stable"
-        }
     }
-}
+}    
+    
