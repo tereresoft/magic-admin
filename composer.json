@@ -8,6 +8,7 @@
             "email": "tereresoft@gmail.com"
         }
     ],
+    "version":"0.0.3-stable",
     "minimum-stabuluty":"stable",
     "autoload": {
         "psr-4": {
