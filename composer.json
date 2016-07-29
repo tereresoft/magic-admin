@@ -1,7 +1,7 @@
 {
-    "name": "tereresoft/laravel-magicadmin",
+    "name": "tereresoft/magic-admin",
     "description": "Crea un Admin Backend para  Laravel",
-    "license": "MIT",
+    "license": "Apache",
     "authors": [
         {
             "name": "Richard Arce",
