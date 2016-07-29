@@ -1,2 +1,2 @@
 # MagicAdmin
-Crea un Admin Backend
+Crea un Admin Backend para Laravel
