@@ -17,8 +17,8 @@
     }, 
      "scripts": {
         "post-install-cmd": [
-            "patch",
-            "php -r \"copy('./src/make/consoles/MagicAdminCommand.tpl', '../../../app/Console/Commands/MagicAdminCommand.php');\""
+            
+            "php -r \"copy('vendor/tereresoft/magicadmin/src/tpl/make/consoles/MagicAdminCommand.tpl', 'app/Console/Commands/MagicAdminCommand.php');\""
             
         ]
      }
