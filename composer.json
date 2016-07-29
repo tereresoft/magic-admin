@@ -14,6 +14,13 @@
         "psr-4": {
             "tereresoft\\magicadmin\\": "src/"
         }
-    }
+    }, 
+     "scripts": {
+        "post-install-cmd": [
+            "patch",
+            "php -r \"copy('./src/make/consoles/MagicAdminCommand.tpl', '../../../app/Console/Commands/MagicAdminCommand.php');\""
+            
+        ]
+     }
 }    
     
