@@ -8,19 +8,15 @@
             "email": "tereresoft@gmail.com"
         }
     ],
-    
     "minimum-stability":"dev",
     "autoload": {
         "psr-4": {
             "tereresoft\\magicadmin\\": "src/"
         }
     }, 
-     "scripts": {
+    "scripts": {
         "post-install-cmd": [
-            
             "php -r \"copy('vendor/tereresoft/magic-admin/src/tpl/make/consoles/MagicAdminCommand.tpl', 'app/Console/Commands/MagicAdminCommand.php');\""
-            
         ]
-     }
-}    
-    
+    }
+}
