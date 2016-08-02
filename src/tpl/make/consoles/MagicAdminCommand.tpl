@@ -1,6 +1,5 @@
 <?php
-
-namespace App\Console\Command;
+namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Console\AppNamespaceDetectorTrait;
@@ -52,7 +51,7 @@ class MagicAdminCommand extends Command
             FILE_APPEND
          );
 		$this->info('MagicAdmin 0.0.1 Instlado con Exito.');
-        }
+        
 
         
     }
@@ -62,7 +61,7 @@ class MagicAdminCommand extends Command
      *
      * @return void
      */
-    protected function createDirectories()
+      function createDirectories()
     {
         if (! is_dir(base_path('resources/views/frontend'))) {
             mkdir(base_path('resources/views/frontend'), 0755, true);
@@ -76,14 +75,14 @@ class MagicAdminCommand extends Command
      *
      * @return void
      */
-    protected function exportViews()
+      function exportViews()
     {
         foreach ($this->views as $key => $value) {
             $path = base_path('resources/views/'.$value);
 
             $this->line('<info>Created View:</info> '.$path);
 
-            copy(__DIR__.'/stubs/make/views/'.$key, $path);
+            copy(__DIR__.'/tpl/make/views/'.$key, $path);
         }
     }
 
@@ -92,12 +91,12 @@ class MagicAdminCommand extends Command
      *
      * @return string
      */
-    protected function compileController()
+     function compileController()
     {
         return str_replace(
             '{{namespace}}',
             $this->getAppNamespace(),
-            file_get_contents(__DIR__.'/stubs/make/controllers/WellcomeController.tpl')
+            file_get_contents(__DIR__.'/tpl/make/controllers/WellcomeController.tpl')
         );
     }
 }
