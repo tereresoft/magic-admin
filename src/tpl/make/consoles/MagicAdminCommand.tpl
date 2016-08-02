@@ -28,7 +28,7 @@ class MagicAdminCommand extends Command
      * @var array
      */
     protected $views = [
-        'frontend/welcome.tpl' => 'frontend/wellcome.blade.php',
+        'wellcome.tpl' => 'frontend/wellcome.blade.php',
     ];
 
     /**
@@ -42,15 +42,18 @@ class MagicAdminCommand extends Command
         $this->createDirectories();
         $this->exportViews();
         file_put_contents(
-            app_path('Http/Controllers/WellcomeController.tpl'),
+            app_path('Http/Controllers/WellcomeController.php'),
              $this->compileController()
          );
+		 $this->line('<info>Creando Controladores</info> ');
         file_put_contents(
             app_path('Http/routes.php'),
-            file_get_contents(__DIR__.'/stubs/make/routes.tpl'),
+            //file_get_contents(__DIR__.'/src/rpl/make/routes.tpl'),
+			$this->compileRoute(),
             FILE_APPEND
          );
-		$this->info('MagicAdmin 0.0.1 Instlado con Exito.');
+		 $this->line('<info>Creando Rutas</info> ');
+		$this->info('MagicAdmin 0.1.2 Instalado con Exito.');
         
 
         
@@ -78,11 +81,17 @@ class MagicAdminCommand extends Command
       function exportViews()
     {
         foreach ($this->views as $key => $value) {
-            $path = base_path('resources/views/'.$value);
-
-            $this->line('<info>Created View:</info> '.$path);
-
-            copy(__DIR__.'/tpl/make/views/'.$key, $path);
+            
+			$os =PHP_OS;
+			if(preg_match("/WIN/", $os)){
+							$path = base_path("resources\\views\\".$value);
+		     
+				$vendor = base_path("vendor\\tereresoft\\magic-admin\\src\\tpl\\make\\views\\".$key);
+			}else{
+				echo "no es Windows";
+			}
+			copy($vendor, $path);
+			$this->line('<info>Creando Vistas</info> '.$path);
         }
     }
 
@@ -93,10 +102,27 @@ class MagicAdminCommand extends Command
      */
      function compileController()
     {
+		$os =PHP_OS;
+		if(preg_match("/WIN/", $os)){
+			   $vendor = base_path("vendor\\tereresoft\\magic-admin\\src\\tpl\\make\\controllers\\WellcomeController.tpl");
+		}else{
+			echo "no es Windows";
+		}
         return str_replace(
             '{{namespace}}',
             $this->getAppNamespace(),
-            file_get_contents(__DIR__.'/tpl/make/controllers/WellcomeController.tpl')
+            file_get_contents($vendor)
         );
+    }
+	
+	/**
+     * Compiles the Controllers.
+     *
+     * @return string
+     */
+     function compileRoute()
+    {
+		$vendor = base_path("vendor\\tereresoft\\magic-admin\\src\\tpl\\make\\routes.tpl");
+        return file_get_contents($vendor);
     }
 }
