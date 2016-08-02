@@ -1,6 +1,6 @@
 {
     "name": "tereresoft/magic-admin",
-    "description": "Crea un Admin Backend para  Laravel",
+    "description": "Crea un Admin Backend para  Laravel 5",
     "license": "Apache",
     "authors": [
         {
@@ -9,14 +9,10 @@
         }
     ],
     "minimum-stability":"dev",
-    "autoload": {
-        "psr-4": {
-            "tereresoft\\magicadmin\\": "src/"
-        }
-    }, 
     "scripts": {
         "post-install-cmd": [
-            "php -r \"copy('vendor/tereresoft/magic-admin/src/tpl/make/consoles/MagicAdminCommand.tpl', 'app/Console/Commands/MagicAdminCommand.php');\""
+            "dir ",
+            "php -r copy('vendor/tereresoft/magic-admin/src/tpl/make/consoles/MagicAdminCommand.tpl', 'app/Console/Commands/MagicAdminCommand.php');"
         ]
     }
 }
