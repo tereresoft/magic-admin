@@ -9,10 +9,5 @@
         }
     ],
     "minimum-stability":"dev",
-    "scripts": {
-        "post-install-cmd": [
-            "dir ",
-            "php -r copy('vendor/tereresoft/magic-admin/src/tpl/make/consoles/MagicAdminCommand.tpl', 'app/Console/Commands/MagicAdminCommand.php');"
-        ]
-    }
+    
 }
